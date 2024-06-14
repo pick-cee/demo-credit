@@ -1,8 +1,10 @@
 import express from 'express'
 import cors from 'cors'
 import morgan from 'morgan'
-import config from './database/knexfile'
-
+import userRoutes from './routes/userRoutes'
+import transactionRoutes from './routes/transactionRoutes'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
 app.use(express.json())
@@ -16,5 +18,7 @@ app.get("/", (request, response) => {
     response.json("Welcome to Demo credit")
 })
 
+app.use('/api/v1/users', userRoutes)
+app.use('/api/v1/transactions', transactionRoutes)
 
 export default app

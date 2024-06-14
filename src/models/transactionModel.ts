@@ -14,9 +14,9 @@ export interface Transaction {
     updated_at?: Date;
 }
 
-export const createTransaction = async (transaction: Transaction): Promise<Transaction> => {
-    const [createdTransaction] = await db('transactions').insert(transaction).returning('*')
-    return createdTransaction as Transaction
+export const createTransaction = async (transaction: Transaction): Promise<Number> => {
+    const [createdTransaction] = await db('transactions').insert(transaction)
+    return createdTransaction
 }
 
 export const getTransactionByUserId = async (user_id: number): Promise<Transaction[]> => {
