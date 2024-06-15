@@ -88,7 +88,7 @@ A well detailed guide on how to interact with the API endpoints. [Postman docs](
 
 ### Full documentation
 
-You can find the full documentation, containing reasons behind the tech stack and other assumptions. [Full docs]()
+You can find the full documentation, containing reasons behind the tech stack and other assumptions. [Full docs](https://docs.google.com/document/d/1PtWEYTynp69FvaXZMqTUEDb8dgNE4odSsDyhd7beb6A/edit?usp=sharing)
 
 ### Author
 
