@@ -8,7 +8,6 @@ const signup = async (req: Request, res: Response, next: NextFunction) => {
 
     // check if user is blacklisted
     const isBlacklisted = await checkBlacklist(email)
-    console.log(isBlacklisted.status)
     if (isBlacklisted?.status === 200) {
         return next(new CustomResponse(res).error(
             'You cannot sign up, you are in the blacklist',
