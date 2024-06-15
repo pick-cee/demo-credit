@@ -67,6 +67,12 @@ Follow these instruction to get the project up and running on your local machine
    <code>yarn start</code>
    <br>
 
+7. Run tests:<br>
+   <code> npm run test</code>
+   <br> or <br>
+   <code>yarn test</code>
+   <br>
+
 The application will be available at `http://localhost:{PORT}`.
 <br>
 
@@ -82,6 +88,10 @@ The application will be available at `http://localhost:{PORT}`.
 
 A simple middleware to simulate token-based authentication.
 
+### Unit Testing
+
+Unit tests will be written to cover positive and negative scenarios for each feature.
+
 ### Postman Documentation
 
 A well detailed guide on how to interact with the API endpoints. [Postman docs]()
@@ -89,6 +99,10 @@ A well detailed guide on how to interact with the API endpoints. [Postman docs](
 ### Full documentation
 
 You can find the full documentation, containing reasons behind the tech stack and other assumptions. [Full docs](https://docs.google.com/document/d/1PtWEYTynp69FvaXZMqTUEDb8dgNE4odSsDyhd7beb6A/edit?usp=sharing)
+
+### Live API
+
+[Link to the live API]()
 
 ### Author
 

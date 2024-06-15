@@ -18,7 +18,7 @@ const signup = async (req: Request, res: Response, next: NextFunction) => {
     const userExists = await getUserByEmail(email)
     if (userExists) {
         return next(new CustomResponse(res).error(
-            'User already exists, sign up',
+            'User already exists, sign in',
             400
         ))
     }

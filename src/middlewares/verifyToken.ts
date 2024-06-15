@@ -44,6 +44,6 @@ export async function verifyToken(
         }
     }
     else {
-        return next(new CustomResponse(response).error('Your are not authenticated', 401))
+        return next(new CustomResponse(response).error('You are not authenticated', 401))
     }
 }
