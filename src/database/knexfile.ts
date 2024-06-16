@@ -1,17 +1,17 @@
 import type { Knex } from "knex";
 import dotenv from 'dotenv'
-dotenv.config()
-// Update with your config settings.
+dotenv.config({ path: '../../.env' })
 
 const config: Knex.Config = {
   client: 'mysql2',
   connection: {
-    host: `${process.env.DATABASE_HOST}`,
-    port: Number(`${process.env.DATABASE_PORT}`),
-    user: `${process.env.DATABASE_USERNAME}`,
-    password: `${process.env.DATABASE_PASSWORD}`,
-    database: `${process.env.DATABASE_NAME}`,
+    host: 'mysql-democredit-akinloluwaolumuyide-democredit.g.aivencloud.com' || process.env.DATABASE_HOST,
+    port: 27368 || Number(`${process.env.DATABASE_PORT}`),
+    user: 'ravnadminoot' || `${process.env.DATABASE_USERNAME}`,
+    password: 'AVNS_dsFT5iGdyfwNsjyUhKV' || `${process.env.DATABASE_PASSWORD}`,
+    database: 'defaultdb' || `${process.env.DATABASE_NAME}`,
   },
+
   pool: {
     max: 5,
     min: 0,
@@ -20,5 +20,4 @@ const config: Knex.Config = {
     directory: ['./migrations']
   }
 };
-
 export default config
