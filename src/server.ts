@@ -1,6 +1,5 @@
 import dotenv from 'dotenv'
 import app from './app'
-import { checkBlacklist } from './utils'
 
 dotenv.config()
 const port = process.env.PORT

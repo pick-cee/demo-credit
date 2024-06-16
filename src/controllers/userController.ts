@@ -2,6 +2,8 @@ import { NextFunction, Request, Response } from "express";
 import * as argon from 'argon2'
 import { createUser, createWallet, getUserByEmail } from "../models";
 import { CustomResponse, checkBlacklist, jwtSign } from "../utils";
+import dotenv from 'dotenv'
+dotenv.config()
 
 const signup = async (req: Request, res: Response, next: NextFunction) => {
     const { fullName, email, password } = req.body

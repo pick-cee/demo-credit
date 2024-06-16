@@ -14,7 +14,6 @@ app.use((morgan('combined')))
 
 // home route
 app.get("/", (request, response) => {
-    console.log(process.env.DATABASE_USER)
     response.json("Welcome to Demo credit")
 })
 
