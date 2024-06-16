@@ -6,11 +6,11 @@ dotenv.config()
 const config: Knex.Config = {
   client: 'mysql2',
   connection: {
-    host: '127.0.0.1',
-    port: 3306,
-    user: `root` || `${process.env.DATABASE_USER}`,
-    password: 'password' || process.env.DATABASE_PASSWORD,
-    database: 'lendsqr' || `${process.env.DATABASE_NAME}`,
+    host: `${process.env.DATABASE_HOST}`,
+    port: Number(`${process.env.DATABASE_PORT}`),
+    user: `${process.env.DATABASE_USERNAME}`,
+    password: `${process.env.DATABASE_PASSWORD}`,
+    database: `${process.env.DATABASE_NAME}`,
   },
   pool: {
     max: 5,
