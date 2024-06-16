@@ -94,7 +94,7 @@ Unit tests will be written to cover positive and negative scenarios for each fea
 
 ### Postman Documentation
 
-A well detailed guide on how to interact with the API endpoints. [Postman docs]()
+A well detailed guide on how to interact with the API endpoints. [Postman docs](https://documenter.getpostman.com/view/16987750/2sA3XQiNWN)
 
 ### Full documentation
 
@@ -102,7 +102,7 @@ You can find the full documentation, containing reasons behind the tech stack an
 
 ### Live API
 
-[Link to the live API]()
+[Link to the live API](https://akinloluwaolumuyide-lendsqr-be-test.onrender.com)
 
 ### Author
 
