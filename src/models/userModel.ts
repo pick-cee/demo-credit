@@ -15,21 +15,22 @@ export interface User {
     updated_at?: Date;
 }
 
-export const getUserByEmail = async (email: string): Promise<User | undefined> => {
-    const [user] = await db('users').where({ email })
-    return user as User
+export const getUserByEmail = async (email: string, trx?: Knex.Transaction): Promise<User | undefined> => {
+    const [query] = await db('users').where({ email })
+    return query as User
 }
 
-export const createUser = async (user: User): Promise<number> => {
+export const createUser = async (user: User, trx?: Knex.Transaction): Promise<number> => {
     const [createdUser] = await db('users').insert(user)
     return createdUser
 }
 
-export const getUserById = async (id: number): Promise<User | undefined> => {
-    const [user] = await db('users').where({ id })
+export const getUserById = async (id: number, trx?: Knex.Transaction): Promise<User | undefined> => {
+    const [user] = await db('users').where({ id }) as any
     return user as User
 }
 
-export const updateUserBalance = async (id: number, amount: number): Promise<any> => {
-    return await db('users').where({ id }).increment('balance', amount)
+export const updateUserBalance = async (id: number, amount: number, trx?: Knex.Transaction): Promise<any> => {
+    const query = await db('users').transacting(trx!).where({ id }).increment('balance', amount) as any
+    return query
 }

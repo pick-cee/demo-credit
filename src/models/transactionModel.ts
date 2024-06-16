@@ -16,8 +16,8 @@ export interface Transaction {
     updated_at?: Date;
 }
 
-export const createTransaction = async (transaction: Transaction): Promise<Number> => {
-    const [createdTransaction] = await db('transactions').insert(transaction)
+export const createTransaction = async (transaction: Transaction, trx?: Knex.Transaction): Promise<Number> => {
+    const [createdTransaction] = await db('transactions').transacting(trx!).insert(transaction) as any
     return createdTransaction
 }
 
